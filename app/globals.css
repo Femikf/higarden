@@ -1,0 +1,206 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+
+  /* Official HiGarden Brand Palette */
+  --color-higarden-primary: #075B2A;
+  --color-higarden-dark: #063B1C;
+  --color-higarden-bright: #63C132;
+  --color-higarden-lime: #8ED63F;
+  --color-higarden-leaf: #2E8B3C;
+  --color-higarden-soft: #EAF5E6;
+  --color-higarden-cream: #F8F6ED;
+  --color-higarden-white: #FFFFFF;
+  --color-higarden-text: #17351F;
+  --color-higarden-muted: #5F6F62;
+
+  /* Forest Green scale tuned to HiGarden Deep & Dark Greens */
+  --color-forest-50: #f3faf1;
+  --color-forest-100: #EAF5E6;
+  --color-forest-200: #c9eac2;
+  --color-forest-300: #a4dd98;
+  --color-forest-400: #63C132;
+  --color-forest-500: #3ea844;
+  --color-forest-600: #2E8B3C;
+  --color-forest-700: #1b6f30;
+  --color-forest-800: #075B2A;
+  --color-forest-900: #063B1C;
+  --color-forest-950: #032110;
+
+  /* Retain gold tokens as lime/green tinted highlights to prevent breakages */
+  --color-gold-50: #f7fcf4;
+  --color-gold-100: #EAF5E6;
+  --color-gold-200: #d6f2cc;
+  --color-gold-300: #b5e9a4;
+  --color-gold-400: #8ED63F;
+  --color-gold-500: #63C132;
+  --color-gold-600: #4ba820;
+  --color-gold-700: #2E8B3C;
+  --color-gold-800: #075B2A;
+  --color-gold-900: #063B1C;
+
+  --color-sage-100: #EAF5E6;
+  --color-sage-300: #c2e2bd;
+  --color-sage-500: #6bb96f;
+  --color-sage-700: #2E8B3C;
+
+  --color-olive-100: #f2f7ec;
+  --color-olive-500: #63a838;
+  --color-olive-700: #075B2A;
+
+  --color-cream: #F8F6ED;
+  --color-warm-white: #FFFFFF;
+
+  --color-sand-100: #F3EFE6;
+  --color-sand-200: #EBE5D8;
+  --color-sand-300: #DFD7C5;
+  --color-sand-400: #CFBEA4;
+
+  --color-stone-400: #88978B;
+  --color-stone-500: #5F6F62;
+  --color-stone-600: #4B594E;
+  --color-stone-700: #334036;
+
+  --color-brown-100: #efe3da;
+  --color-brown-500: #6b4a35;
+  --color-brown-700: #4a3222;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.4);
+  --radius-4xl: calc(var(--radius) * 3);
+}
+
+:root {
+  --background: #F8F6ED;
+  --foreground: #17351F;
+  --card: #FFFFFF;
+  --card-foreground: #17351F;
+  --popover: #FFFFFF;
+  --popover-foreground: #17351F;
+  --primary: #075B2A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EAF5E6;
+  --secondary-foreground: #063B1C;
+  --muted: #EAF5E6;
+  --muted-foreground: #5F6F62;
+  --accent: #63C132;
+  --accent-foreground: #063B1C;
+  --destructive: #c0392b;
+  --border: #dfebd9;
+  --input: #dfebd9;
+  --ring: #63C132;
+  --chart-1: #075B2A;
+  --chart-2: #63C132;
+  --chart-3: #8ED63F;
+  --chart-4: #2E8B3C;
+  --chart-5: #063B1C;
+  --radius: 1.25rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #17351F;
+  --sidebar-primary: #075B2A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EAF5E6;
+  --sidebar-accent-foreground: #063B1C;
+  --sidebar-border: #dfebd9;
+  --sidebar-ring: #63C132;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    @apply bg-higarden-bright/30 text-higarden-dark;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/85 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_-8px_rgba(7,91,42,0.15)];
+  }
+  .glass-dark {
+    @apply bg-higarden-dark/85 backdrop-blur-xl border border-white/10 shadow-[0_12px_40px_-10px_rgba(3,33,16,0.5)];
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .container-hg {
+    @apply mx-auto w-full max-w-[1400px] px-6 md:px-10 xl:px-16;
+  }
+  .animate-marquee {
+    animation: marquee 42s linear infinite;
+  }
+  .leaf-mask {
+    border-radius: 2.5rem 0.75rem 2.5rem 0.75rem;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
