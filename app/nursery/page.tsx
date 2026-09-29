@@ -4,7 +4,6 @@ import { Compass, Truck, ShieldCheck, Sprout, Phone, MapPin } from "lucide-react
 import { FaWhatsapp } from "react-icons/fa6";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { MagneticButton } from "@/components/shared/MagneticButton";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { unsplash } from "@/lib/unsplash";
 import { nurseryServices } from "@/constants/nursery";

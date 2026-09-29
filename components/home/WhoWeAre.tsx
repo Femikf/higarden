@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Calendar, CheckCircle2, MapPin, Trees } from "lucide-react";
+import { Calendar, MapPin, Trees } from "lucide-react";
 import { fadeUp, scaleIn, staggerContainer, viewportOnce } from "@/lib/motion";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { MagneticButton } from "@/components/shared/MagneticButton";

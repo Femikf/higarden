@@ -3,7 +3,6 @@
 import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { MoveHorizontal } from "lucide-react";
-import { SectionHeading } from "@/components/shared/SectionHeading";
 import { unsplash } from "@/lib/unsplash";
 import { cn } from "@/lib/utils";
 

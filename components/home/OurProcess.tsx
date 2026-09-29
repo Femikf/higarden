@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf, Sprout, Compass, CheckCircle2 } from "lucide-react";
+import { Leaf, Sprout, Compass, CheckCircle2 } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { MagneticButton } from "@/components/shared/MagneticButton";
 import { processSteps } from "@/constants/process";

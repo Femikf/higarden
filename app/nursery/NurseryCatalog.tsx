@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sun, Droplets, MapPin, Sparkles } from "lucide-react";
+import { Sun, Droplets, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { nurseryCategories, nurseryPlants } from "@/constants/nursery";
 import type { PlantCategory } from "@/types";
