@@ -103,23 +103,6 @@ export function Hero() {
       <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-forest-950/60 via-forest-950/15 to-transparent pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-forest-950/85 via-forest-950/30 to-transparent pointer-events-none" />
 
-      {/* Top Header Row (Non-intrusive) */}
-      <div className="container-hg relative z-20 pt-24 sm:pt-28 flex items-center justify-between gap-4">
-        {/* Eyebrow Badge */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-forest-950/75 px-4 py-1.5 text-[0.7rem] sm:text-xs font-bold uppercase tracking-[0.2em] text-higarden-lime shadow-lg backdrop-blur-md"
-        >
-          <span className="size-2 rounded-full bg-higarden-bright animate-pulse" />
-          <span>LANDSCAPING &bull; GARDEN DESIGN &bull; MAINTENANCE</span>
-        </motion.div> */}
-
-        {/* Current Live Stage Pill */}
-
-      </div>
-
       {/* Middle Spacer: Keeps the entire villa house, lawn, and garden completely unobstructed */}
       <div className="flex-1 pointer-events-none" />
 
@@ -140,9 +123,9 @@ export function Hero() {
           <span className="size-2 rounded-full bg-higarden-bright animate-pulse" />
           <span>LANDSCAPING &bull; GARDEN DESIGN &bull; MAINTENANCE</span>
         </motion.div>
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pt-5">
             {/* Headline & Tagline Lockup */}
-            <div className="flex flex-col gap-1 max-w-xl">
+            <div className="flex flex-col gap-1 max-w-xl pb-4">
               <h1 className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight text-white leading-tight">
                 <span>Let&rsquo;s Grow </span>
                 <span className="text-higarden-bright drop-shadow-[0_2px_12px_rgba(99,193,50,0.45)]">
@@ -186,56 +169,16 @@ export function Hero() {
           </div>
 
           {/* Minimal 4-Stage Progress Scrubber */}
-          <div className="mt-3.5 pt-3 border-t border-white/10 grid grid-cols-4 gap-2 sm:gap-4">
-            {STAGES.map((stage, idx) => {
-              const isActive = idx === currentStep;
-              const isPast = idx < currentStep;
-
-              return (
-                <button
-                  key={stage.id}
-                  type="button"
-                  onClick={() => setCurrentStep(idx)}
-                  className="group flex flex-col text-left focus:outline-none"
-                  aria-label={`Jump to stage ${stage.step}: ${stage.phase}`}
-                >
-                  <div className="relative h-1.5 w-full overflow-hidden rounded-full bg-white/20">
-                    {isActive ? (
-                      <motion.div
-                        key={`progress-${currentStep}`}
-                        initial={{ width: "0%" }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: STAGE_DURATION / 1000, ease: "linear" }}
-                        className="absolute inset-y-0 left-0 bg-higarden-bright rounded-full shadow-[0_0_8px_rgba(99,193,50,0.8)]"
-                      />
-                    ) : (
-                      <div
-                        className={`h-full rounded-full transition-all duration-300 ${
-                          isPast ? "bg-higarden-bright/80 w-full" : "w-0"
-                        }`}
-                      />
-                    )}
-                  </div>
-                  <div className="mt-1 flex items-center justify-between text-[0.65rem] sm:text-xs font-bold">
-                    <span
-                      className={
-                        isActive ? "text-higarden-bright" : "text-white/50 group-hover:text-white/80"
-                      }
-                    >
-                      {stage.step}
-                    </span>
-                    <span
-                      className={`truncate hidden xs:inline ${
-                        isActive ? "text-white" : "text-white/50 group-hover:text-white/80"
-                      }`}
-                    >
-                      {stage.phase}
-                    </span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+          <motion.div
+          key={`badge-${activeStage.id}`}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
+          className="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/20 bg-forest-950/75 px-4 py-1.5 text-xs font-semibold text-white shadow-lg backdrop-blur-md"
+        >
+          <span className="size-2 rounded-full bg-higarden-bright animate-ping" />
+          <span>{activeStage.badge}</span>
+        </motion.div> 
         </motion.div>
       </div>
     </section>
