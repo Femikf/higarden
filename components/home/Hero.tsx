@@ -68,9 +68,13 @@ export function Hero() {
 
   const activeStage = STAGES[currentStep];
 
+  const handleNextStage = () => {
+    setCurrentStep((prev) => (prev + 1) % STAGES.length);
+  };
+
   return (
     <section
-      className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden bg-forest-950"
+      className="relative min-h-[100svh] flex flex-col justify-between overflow-hidden bg-forest-950 pt-20 sm:pt-24 lg:pt-0"
       aria-label="HiGarden Landscaping Studio"
     >
       {/* Hidden preloader so browser HTTP cache and decode pipeline are instantly warm */}
@@ -87,8 +91,22 @@ export function Hero() {
         ))}
       </div>
 
-      {/* 100% Unobstructed Full-Bleed Panoramic Background Image */}
-      <div className="absolute inset-0 scale-105 pointer-events-none">
+      {/* Atmospheric Ambient Glow on Mobile (< lg) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none lg:hidden">
+        <div className="absolute -inset-10 opacity-35 blur-3xl">
+          <Image
+            src={activeStage.src}
+            alt=""
+            fill
+            className="object-cover object-center scale-125"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="absolute inset-0 bg-forest-950/75" />
+      </div>
+
+      {/* Desktop Full-Bleed Panoramic Background Image (lg: screens) */}
+      <div className="hidden lg:block absolute inset-0 scale-105 pointer-events-none">
         <AnimatePresence mode="sync">
           <motion.div
             key={activeStage.id}
@@ -119,32 +137,97 @@ export function Hero() {
         </AnimatePresence>
       </div>
 
-      {/* Gentle Edge Vignettes Only (Middle 80% is 100% crystal clear natural sunlight) */}
-      <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-forest-950/60 via-forest-950/15 to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-44 sm:h-48 bg-gradient-to-t from-forest-950/85 via-forest-950/30 to-transparent pointer-events-none" />
+      {/* Desktop Gentle Edge Vignettes Only (Middle 80% is 100% crystal clear natural sunlight) */}
+      <div className="hidden lg:block absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-forest-950/60 via-forest-950/15 to-transparent pointer-events-none" />
+      <div className="hidden lg:block absolute inset-x-0 bottom-0 h-44 sm:h-48 bg-gradient-to-t from-forest-950/85 via-forest-950/30 to-transparent pointer-events-none" />
 
-      {/* Middle Spacer: Keeps the entire villa house, lawn, and garden completely unobstructed */}
-      <div className="flex-1 pointer-events-none" />
+      {/* Mobile Stage Image Container (< lg): 100% uncropped aspect ratio so side parts are completely visible */}
+      <div className="lg:hidden container-hg relative z-20 py-2 sm:py-4">
+        <div
+          onClick={handleNextStage}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") handleNextStage();
+          }}
+          aria-label="Tap to preview next transformation stage"
+          className="relative w-full max-w-xl mx-auto aspect-[1376/768] overflow-hidden rounded-2xl sm:rounded-3xl border border-white/25 bg-forest-950/90 shadow-[0_16px_40px_rgba(0,0,0,0.6)] cursor-pointer group select-none"
+        >
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={activeStage.id}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.8, ease: "easeInOut" },
+              }}
+              exit={{
+                opacity: 0,
+                transition: { duration: 0.7, ease: "easeInOut" },
+              }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={activeStage.src}
+                alt={activeStage.title}
+                fill
+                priority
+                sizes="(max-width: 1024px) 96vw, 100vw"
+                className="object-contain sm:object-cover object-center"
+              />
+            </motion.div>
+          </AnimatePresence>
 
-      {/* Compact Bottom Floating Dock: Purely Visible Writings & CTAs */}
+          {/* Mobile Overlay Badges */}
+          <div className="absolute inset-x-0 top-0 p-2.5 sm:p-3.5 flex items-center justify-between gap-2 pointer-events-none">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-forest-950/85 px-2.5 py-1 text-[0.62rem] sm:text-xs font-bold uppercase tracking-wider text-higarden-lime shadow-md backdrop-blur-md">
+              <span className="size-1.5 rounded-full bg-higarden-bright animate-pulse" />
+              <span>LANDSCAPING &bull; DESIGN</span>
+            </span>
+
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-higarden-bright/50 bg-forest-900/90 px-2.5 py-1 text-[0.65rem] sm:text-xs font-semibold text-white shadow-md backdrop-blur-md">
+              <span className="size-1.5 rounded-full bg-higarden-bright animate-ping" />
+              <span>{activeStage.badge}</span>
+            </span>
+          </div>
+
+          {/* Subtle bottom indicator hint */}
+          <div className="absolute inset-x-0 bottom-0 py-1.5 px-3 bg-gradient-to-t from-forest-950/80 to-transparent flex items-center justify-center gap-1.5">
+            {STAGES.map((s, idx) => (
+              <span
+                key={s.id}
+                className={`h-1 rounded-full transition-all duration-300 ${
+                  idx === currentStep
+                    ? "w-6 bg-higarden-bright"
+                    : "w-2 bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Middle Spacer for Desktop: Keeps the entire villa house, lawn, and garden completely unobstructed */}
+      <div className="hidden lg:flex flex-1 pointer-events-none" />
+
+      {/* Bottom Floating Dock: Purely Visible Writings & CTAs (Both Mobile & Desktop) */}
       <div className="container-hg relative z-20 pb-4 sm:pb-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="w-full rounded-2xl sm:rounded-3xl border border-white/20 bg-forest-950/85 px-4 py-3.5 sm:px-8 sm:py-5 shadow-[0_20px_50px_rgba(0,0,0,0.55)] backdrop-blur-xl"
+          className="w-full max-w-xl mx-auto lg:max-w-none rounded-2xl sm:rounded-3xl border border-white/20 bg-forest-950/85 px-4 py-3.5 sm:px-8 sm:py-5 shadow-[0_20px_50px_rgba(0,0,0,0.55)] backdrop-blur-xl"
         >
-          {/* Top row: Category Badge on left, Live Stage Pill on right */}
-          <div className="flex items-center justify-between gap-2 mb-2 sm:mb-3">
+          {/* Desktop Top Row (Hidden on mobile because it's overlaid on the stage photo) */}
+          <div className="hidden lg:flex items-center justify-between gap-2 mb-3">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-forest-950/75 px-3 py-1 sm:px-4 sm:py-1.5 text-[0.65rem] sm:text-xs font-bold uppercase tracking-wider text-higarden-lime shadow-md backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-forest-950/75 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-higarden-lime shadow-md backdrop-blur-md"
             >
-              <span className="size-1.5 sm:size-2 rounded-full bg-higarden-bright animate-pulse" />
-              <span className="hidden xs:inline">LANDSCAPING &bull; GARDEN DESIGN &bull; MAINTENANCE</span>
-              <span className="xs:hidden">LANDSCAPING &bull; DESIGN</span>
+              <span className="size-2 rounded-full bg-higarden-bright animate-pulse" />
+              <span>LANDSCAPING &bull; GARDEN DESIGN &bull; MAINTENANCE</span>
             </motion.div>
 
             <motion.div
@@ -152,7 +235,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="inline-flex items-center gap-1.5 rounded-full border border-higarden-bright/40 bg-forest-900/80 px-2.5 py-1 sm:px-3 sm:py-1 text-[0.68rem] sm:text-xs font-semibold text-white shadow-md backdrop-blur-md shrink-0"
+              className="inline-flex items-center gap-1.5 rounded-full border border-higarden-bright/40 bg-forest-900/80 px-3 py-1 text-xs font-semibold text-white shadow-md backdrop-blur-md shrink-0"
             >
               <span className="size-1.5 rounded-full bg-higarden-bright animate-ping" />
               <span>{activeStage.badge}</span>
