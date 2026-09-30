@@ -11,6 +11,7 @@ type MagneticButtonProps = {
   variant?: "solid" | "outline" | "ghost" | "bright";
   className?: string;
   external?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 const variantClasses: Record<NonNullable<MagneticButtonProps["variant"]>, string> = {
@@ -30,6 +31,7 @@ export function MagneticButton({
   variant = "solid",
   className,
   external,
+  onClick,
 }: MagneticButtonProps) {
   const { ref, x, y, onPointerMove, onPointerLeave } = useMagnetic(0.25);
 
@@ -51,14 +53,14 @@ export function MagneticButton({
 
   if (external) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className="inline-block">
+      <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick} className="inline-block">
         {content}
       </a>
     );
   }
 
   return (
-    <Link href={href} className="inline-block">
+    <Link href={href} onClick={onClick} className="inline-block">
       {content}
     </Link>
   );

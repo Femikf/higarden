@@ -24,16 +24,16 @@ export function NurseryShowcase() {
 
   return (
     <section className="container-hg py-20 lg:py-28" aria-labelledby="nursery-showcase-heading">
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-[#eef7ec] p-8 sm:p-12 lg:p-16 border border-higarden-soft">
+      <div className="relative overflow-hidden rounded-3xl sm:rounded-[2.5rem] bg-[#eef7ec] p-5 sm:p-12 lg:p-16 border border-higarden-soft">
         {/* Background decorative botanical pattern */}
         <div
           aria-hidden="true"
           className="absolute -right-24 -top-24 size-96 rounded-full bg-higarden-bright/15 blur-3xl pointer-events-none"
         />
 
-        <div className="relative z-10 flex flex-col gap-10">
+        <div className="relative z-10 flex flex-col gap-8 sm:gap-10">
           {/* Section Header */}
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <SectionHeading
               id="nursery-showcase-heading"
               eyebrow="HiGarden Nursery &middot; Palakkad"
@@ -56,7 +56,7 @@ export function NurseryShowcase() {
               <Link
                 key={cat.name}
                 href={`/nursery?cat=${cat.slug}`}
-                className="group flex flex-col justify-between rounded-2xl border border-higarden-soft bg-white p-4 shadow-sm transition-all duration-200 hover:border-higarden-bright hover:shadow-md"
+                className="group flex flex-col justify-between rounded-2xl border border-higarden-soft bg-white p-3.5 sm:p-4 shadow-sm transition-all duration-200 hover:border-higarden-bright hover:shadow-md last:col-span-2 sm:last:col-span-1"
               >
                 <div className="flex items-center justify-between">
                   <span className="flex size-7 items-center justify-center rounded-lg bg-higarden-soft text-higarden-primary group-hover:bg-higarden-bright group-hover:text-forest-950 transition-colors">

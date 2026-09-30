@@ -69,7 +69,7 @@ export function BeforeAfterSlider() {
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerLeave={onPointerUp}
-        className="relative mx-auto aspect-[16/10] w-full max-w-5xl select-none overflow-hidden rounded-[2.5rem] bg-forest-900 shadow-[0_25px_60px_-15px_rgba(7,91,42,0.35)] border-4 border-white"
+        className="relative mx-auto aspect-[16/10] w-full max-w-5xl select-none overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-forest-900 shadow-[0_25px_60px_-15px_rgba(7,91,42,0.35)] border-2 sm:border-4 border-white touch-none"
       >
         <Image
           src={after.src}
@@ -91,11 +91,12 @@ export function BeforeAfterSlider() {
           />
         </div>
 
-        <span className="pointer-events-none absolute left-5 top-5 rounded-full bg-forest-950/80 px-4 py-1.5 text-xs font-bold text-white shadow-md backdrop-blur-md">
-          Before Renovation
+        <span className="pointer-events-none absolute left-3 top-3 sm:left-5 sm:top-5 rounded-full bg-forest-950/85 px-2.5 py-1 sm:px-4 sm:py-1.5 text-[0.7rem] sm:text-xs font-bold text-white shadow-md backdrop-blur-md">
+          Before
         </span>
-        <span className="pointer-events-none absolute right-5 top-5 rounded-full bg-higarden-bright px-4 py-1.5 text-xs font-bold text-forest-950 shadow-md">
-          After HiGarden Transformation
+        <span className="pointer-events-none absolute right-3 top-3 sm:right-5 sm:top-5 rounded-full bg-higarden-bright px-2.5 py-1 sm:px-4 sm:py-1.5 text-[0.7rem] sm:text-xs font-bold text-forest-950 shadow-md">
+          <span className="hidden sm:inline">After HiGarden Transformation</span>
+          <span className="sm:hidden">After HiGarden</span>
         </span>
 
         <div
@@ -111,11 +112,11 @@ export function BeforeAfterSlider() {
             aria-valuemax={100}
             onKeyDown={onKeyDown}
             className={cn(
-              "absolute top-1/2 flex size-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-white text-forest-900 shadow-xl outline-none transition-transform hover:scale-110",
+              "absolute top-1/2 flex size-10 sm:size-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-white text-forest-900 shadow-xl outline-none transition-transform hover:scale-110 touch-none",
               "border-2 border-higarden-bright focus-visible:ring-2 focus-visible:ring-higarden-bright focus-visible:ring-offset-2"
             )}
           >
-            <MoveHorizontal className="size-5 text-higarden-primary" aria-hidden="true" />
+            <MoveHorizontal className="size-4 sm:size-5 text-higarden-primary" aria-hidden="true" />
           </div>
         </div>
       </div>

@@ -121,6 +121,7 @@ export function Navbar() {
                     render={
                       <Link
                         href={link.href}
+                        onClick={() => setMobileOpen(false)}
                         className={cn(
                           "block rounded-2xl px-4 py-3 text-lg font-semibold transition-colors",
                           pathname === link.href
@@ -138,6 +139,7 @@ export function Navbar() {
             <div className="mt-auto flex flex-col gap-3 pt-6 border-t border-higarden-soft">
               <MagneticButton
                 href="/contact"
+                onClick={() => setMobileOpen(false)}
                 className="w-full justify-center bg-higarden-bright text-forest-950 font-bold hover:bg-higarden-lime py-3 text-sm"
               >
                 Get a Free Consultation
