@@ -29,7 +29,7 @@ export function FeaturedServices() {
             }
             description="From planning the first plant to maintaining a garden you love."
           />
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
             <MagneticButton href="/services" variant="outline" className="bg-white">
               View All Services
             </MagneticButton>

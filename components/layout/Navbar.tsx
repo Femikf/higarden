@@ -25,8 +25,15 @@ export function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    let ticking = false;
     function onScroll() {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

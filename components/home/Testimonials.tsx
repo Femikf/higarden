@@ -2,9 +2,9 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { TestimonialCard } from "@/components/shared/TestimonialCard";
 import { testimonials } from "@/constants/testimonials";
 
-export function Testimonials() {
-  const marqueeItems = [...testimonials, ...testimonials];
+const marqueeItems = [...testimonials, ...testimonials];
 
+export function Testimonials() {
   return (
     <section
       className="overflow-hidden bg-sand-100 py-24 lg:py-32"

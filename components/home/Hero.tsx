@@ -66,14 +66,6 @@ export function Hero() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Preload all stage images into browser cache immediately
-  useEffect(() => {
-    STAGES.forEach((stage) => {
-      const img = new window.Image();
-      img.src = stage.src;
-    });
-  }, []);
-
   const nextStep = useCallback(() => {
     setCurrentStep((prev) => (prev + 1) % STAGES.length);
   }, []);
@@ -87,11 +79,11 @@ export function Hero() {
     if (prefersReducedMotion || !isPlaying) return;
 
     const timer = setInterval(() => {
-      nextStep();
+      setCurrentStep((prev) => (prev + 1) % STAGES.length);
     }, STAGE_DURATION);
 
     return () => clearInterval(timer);
-  }, [prefersReducedMotion, isPlaying, nextStep, currentStep]);
+  }, [prefersReducedMotion, isPlaying]);
 
   const activeStage = STAGES[currentStep];
 
@@ -103,20 +95,6 @@ export function Hero() {
       {/* Background Ambient Lighting Accents */}
       <div className="absolute top-10 left-1/4 -translate-x-1/2 w-[500px] h-[500px] bg-higarden-primary/25 blur-[140px] rounded-full pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 translate-x-1/2 w-[450px] h-[450px] bg-higarden-bright/15 blur-[130px] rounded-full pointer-events-none" />
-
-      {/* Hidden preloader */}
-      <div className="hidden pointer-events-none" aria-hidden="true">
-        {STAGES.map((stage) => (
-          <Image
-            key={`preload-${stage.id}`}
-            src={stage.src}
-            alt=""
-            width={10}
-            height={10}
-            priority
-          />
-        ))}
-      </div>
 
       <div className="container-hg relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
@@ -180,34 +158,34 @@ export function Hero() {
             </div>
 
             {/* Trust Micro-Metrics */}
-            <div className="pt-3 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4 text-white/90">
-              <div className="flex items-center gap-2">
-                <div className="flex size-7 items-center justify-center rounded-lg bg-higarden-soft/15 text-higarden-bright">
-                  <Trees className="size-4" />
+            <div className="pt-3 border-t border-white/10 grid grid-cols-3 gap-1.5 sm:gap-4 text-white/90">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-higarden-soft/15 text-higarden-bright">
+                  <Trees className="size-3.5 sm:size-4" />
                 </div>
-                <div>
-                  <p className="text-xs sm:text-sm font-bold text-white">500+</p>
-                  <p className="text-[0.68rem] sm:text-xs text-white/60">Gardens Built</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="flex size-7 items-center justify-center rounded-lg bg-higarden-soft/15 text-higarden-bright">
-                  <ShieldCheck className="size-4" />
-                </div>
-                <div>
-                  <p className="text-xs sm:text-sm font-bold text-white">100%</p>
-                  <p className="text-[0.68rem] sm:text-xs text-white/60">Acclimatized</p>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-white leading-tight">500+</p>
+                  <p className="text-[0.62rem] sm:text-xs text-white/60 truncate">Gardens Built</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2">
-                <div className="flex size-7 items-center justify-center rounded-lg bg-higarden-soft/15 text-higarden-bright">
-                  <Star className="size-4 fill-higarden-bright text-higarden-bright" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-higarden-soft/15 text-higarden-bright">
+                  <ShieldCheck className="size-3.5 sm:size-4" />
                 </div>
-                <div>
-                  <p className="text-xs sm:text-sm font-bold text-white">4.9 / 5.0</p>
-                  <p className="text-[0.68rem] sm:text-xs text-white/60">Client Rating</p>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-white leading-tight">100%</p>
+                  <p className="text-[0.62rem] sm:text-xs text-white/60 truncate">Acclimatized</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-higarden-soft/15 text-higarden-bright">
+                  <Star className="size-3.5 sm:size-4 fill-higarden-bright text-higarden-bright" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-white leading-tight">4.9 / 5.0</p>
+                  <p className="text-[0.62rem] sm:text-xs text-white/60 truncate">Client Rating</p>
                 </div>
               </div>
             </div>
@@ -269,7 +247,7 @@ export function Hero() {
                       src={activeStage.src}
                       alt={activeStage.title}
                       fill
-                      priority
+                      priority={activeStage.id === 1}
                       sizes="(max-width: 1024px) 100vw, 55vw"
                       className="object-cover object-center"
                     />
@@ -315,73 +293,6 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* 4-Stage Interactive Progress Tabs */}
-              <div className="mt-3 sm:mt-4 grid grid-cols-4 gap-2 sm:gap-3">
-                {STAGES.map((stage, idx) => {
-                  const isActive = idx === currentStep;
-                  const isPast = idx < currentStep;
-
-                  return (
-                    <button
-                      key={stage.id}
-                      type="button"
-                      onClick={() => {
-                        setCurrentStep(idx);
-                        setIsPlaying(false);
-                      }}
-                      className={cn(
-                        "group flex flex-col text-left p-1.5 sm:p-2 rounded-xl transition-all duration-200 cursor-pointer focus:outline-none",
-                        isActive
-                          ? "bg-white/10 border border-higarden-bright/40 shadow-sm"
-                          : "hover:bg-white/5 border border-transparent"
-                      )}
-                      aria-label={`Jump to stage ${stage.step}: ${stage.phase}`}
-                    >
-                      {/* Animated Progress Bar */}
-                      <div className="relative h-1 sm:h-1.5 w-full overflow-hidden rounded-full bg-white/20">
-                        {isActive ? (
-                          <motion.div
-                            key={`progress-${currentStep}-${isPlaying}`}
-                            initial={{ width: "0%" }}
-                            animate={{ width: isPlaying ? "100%" : "100%" }}
-                            transition={{
-                              duration: isPlaying ? STAGE_DURATION / 1000 : 0.2,
-                              ease: isPlaying ? "linear" : "easeOut",
-                            }}
-                            className="absolute inset-y-0 left-0 bg-higarden-bright rounded-full shadow-[0_0_8px_rgba(99,193,50,0.8)]"
-                          />
-                        ) : (
-                          <div
-                            className={cn(
-                              "h-full rounded-full transition-all duration-300",
-                              isPast ? "bg-higarden-bright/70 w-full" : "w-0"
-                            )}
-                          />
-                        )}
-                      </div>
-
-                      {/* Step Labels */}
-                      <div className="mt-1.5 flex items-center justify-between text-[0.65rem] sm:text-xs font-bold">
-                        <span
-                          className={
-                            isActive ? "text-higarden-bright" : "text-white/60 group-hover:text-white"
-                          }
-                        >
-                          {stage.step}
-                        </span>
-                        <span
-                          className={cn(
-                            "truncate text-[0.62rem] sm:text-xs",
-                            isActive ? "text-white font-extrabold" : "text-white/50 group-hover:text-white/80"
-                          )}
-                        >
-                          {stage.phase}
-                        </span>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
             </div>
           </motion.div>
         </div>

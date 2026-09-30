@@ -45,7 +45,7 @@ export function WhoWeAre() {
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_20px_50px_rgba(7,91,42,0.15)] border-4 border-white">
             <motion.div variants={scaleIn} className="relative h-full w-full">
               <Image
-                src={unsplash("1758599543115-43fd2f939b7e", 1000, 1250)}
+                src={unsplash("1758599543115-43fd2f939b7e", 800, 1000)}
                 alt="HiGarden team landscaping a lush tropical Kerala garden"
                 fill
                 sizes="(min-width: 1024px) 42vw, 90vw"

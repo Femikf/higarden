@@ -112,7 +112,7 @@ export function BeforeAfterSlider() {
             aria-valuemax={100}
             onKeyDown={onKeyDown}
             className={cn(
-              "absolute top-1/2 flex size-10 sm:size-12 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-white text-forest-900 shadow-xl outline-none transition-transform hover:scale-110 touch-none",
+              "absolute top-1/2 flex size-11 sm:size-12 min-h-[44px] min-w-[44px] -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-white text-forest-900 shadow-xl outline-none transition-transform hover:scale-110 touch-none",
               "border-2 border-higarden-bright focus-visible:ring-2 focus-visible:ring-higarden-bright focus-visible:ring-offset-2"
             )}
           >

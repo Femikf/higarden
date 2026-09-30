@@ -10,8 +10,15 @@ export function BackToTop() {
   const lenis = useLenis();
 
   useEffect(() => {
+    let ticking = false;
     function onScroll() {
-      setVisible(window.scrollY > 800);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setVisible(window.scrollY > 800);
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);

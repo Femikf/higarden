@@ -16,7 +16,7 @@ const socialIcons = {
 export function Footer() {
   return (
     <footer className="border-t border-higarden-primary/30 bg-forest-900 text-white">
-      <div className="container-hg grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr] lg:py-24">
+      <div className="container-hg grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr] lg:py-24">
         {/* Brand column */}
         <div className="flex flex-col gap-6">
           <LogoMark tone="light" size="lg" />
