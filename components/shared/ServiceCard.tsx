@@ -38,21 +38,21 @@ export function ServiceCard({ service, index }: { service: Service; index: numbe
       custom={index}
       whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 320, damping: 24 }}
-      className="group relative flex flex-col overflow-hidden rounded-[2rem] border border-higarden-soft bg-white shadow-[0_6px_25px_rgba(7,91,42,0.06)] transition-all duration-300 hover:border-higarden-bright/40 hover:shadow-[0_20px_50px_-10px_rgba(7,91,42,0.18)]"
+      className="group relative flex flex-col overflow-hidden rounded-[2rem] border border-higarden-soft bg-white shadow-[0_6px_25px_rgba(7,91,42,0.06)] transition-[border-color,box-shadow] duration-300 hover:border-higarden-bright/40 hover:shadow-[0_20px_50px_-10px_rgba(7,91,42,0.18)]"
     >
       {/* Large Botanical Image */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-forest-900">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-forest-100/80">
         <Image
           src={service.image.src}
           alt={service.image.alt}
           fill
-          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+          sizes="(min-width: 1280px) 380px, (min-width: 768px) 45vw, calc(100vw - 32px)"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
 
         {/* Floating Icon Badge on top of image */}
-        <div className="absolute bottom-4 left-4 flex size-12 items-center justify-center rounded-2xl bg-white/95 text-higarden-primary shadow-md backdrop-blur-md transition-all duration-300 group-hover:bg-higarden-bright group-hover:text-forest-950 group-hover:scale-105">
+        <div className="absolute bottom-4 left-4 flex size-12 items-center justify-center rounded-2xl bg-white/95 text-higarden-primary shadow-md backdrop-blur-md transition-colors duration-300 group-hover:bg-higarden-bright group-hover:text-forest-950">
           <Icon className="size-6" aria-hidden="true" />
         </div>
       </div>

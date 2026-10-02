@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-  <rect width="40" height="40" rx="10" fill="#0F2E22" />
-  <path
-    d="M20 6c7 3 11 9 11 16 0 6.6-5.4 12-12 12S7 28.6 7 22c0-3 1.2-5.7 3.2-7.8C12.6 17 15 19.5 17 22.5 17.6 15.6 18.4 10 20 6Z"
-    fill="#C9A961"
-  />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#5DB334" />
+  <!-- Central sprout leaves from HiGarden logo -->
+  <path d="M49 22C42 28 39 37 43 46C47 53 57 52 55 42C54 34 51 27 49 22Z" fill="#FFFFFF" />
+  <path d="M55 34C63 35 68 40 66 47C63 52 55 50 54 44C53 39 54 36 55 34Z" fill="#FFFFFF" />
+  <!-- Leaf dot & brand letter -->
+  <text x="50" y="73" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">Hi</text>
+  <text x="50" y="85" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">GARDEN</text>
 </svg>

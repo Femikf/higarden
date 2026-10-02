@@ -82,9 +82,9 @@ export function WhyHigarden() {
                 key={point.title}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className="group relative flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:border-higarden-bright/50 hover:bg-white/10 hover:shadow-[0_15px_35px_rgba(99,193,50,0.15)]"
+                className="group relative flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-[border-color,background-color,box-shadow] duration-300 hover:border-higarden-bright/50 hover:bg-white/10 hover:shadow-[0_15px_35px_rgba(99,193,50,0.15)]"
               >
-                <div className="flex size-14 items-center justify-center rounded-2xl bg-forest-900 border border-higarden-bright/40 text-higarden-bright transition-all duration-300 group-hover:scale-110 group-hover:bg-higarden-bright group-hover:text-forest-950">
+                <div className="flex size-14 items-center justify-center rounded-2xl bg-forest-900 border border-higarden-bright/40 text-higarden-bright transition-colors duration-300 group-hover:bg-higarden-bright group-hover:text-forest-950">
                   <Icon className="size-7" />
                 </div>
                 <div>

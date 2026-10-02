@@ -21,7 +21,7 @@ export function Footer() {
         <div className="flex flex-col gap-6">
           <LogoMark tone="light" size="lg" />
           <p className="max-w-xs text-sm leading-relaxed text-white/75 font-normal">
-            {site.tagline} Kerala&rsquo;s trusted landscaping &amp; nursery studio, crafting living gardens for villas, homes, and resorts.
+            &ldquo;{site.tagline}.&rdquo; Kerala&rsquo;s trusted landscaping &amp; nursery studio, crafting living gardens for villas, homes, and resorts.
           </p>
           <div className="flex items-center gap-3 pt-1">
             {socialLinks.map((social) => {

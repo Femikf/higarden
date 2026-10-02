@@ -28,8 +28,8 @@ const instagramPosts = [
     tag: "#Transformation",
   },
   {
-    image: unsplash("1621958206813-2e9c0441c5b0", 600, 600),
-    alt: "HiGarden team pruning and caring for monsoon plants",
+    image: unsplash("1781753826262-d4ea45a509b3", 600, 600),
+    alt: "Lush tropical plumeria and monsoon plant care in Kerala",
     category: "Gardening Tips",
     tag: "#MonsoonCare",
   },
@@ -89,7 +89,7 @@ export function InstagramFeed() {
                 src={post.image}
                 alt={post.alt}
                 fill
-                sizes="(min-width: 1024px) 16vw, (min-width: 640px) 30vw, 45vw"
+                sizes="(min-width: 1280px) 190px, (min-width: 640px) 30vw, 45vw"
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
               />
               {/* Instagram Hover Overlay */}

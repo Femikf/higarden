@@ -90,15 +90,15 @@ export function NurseryShowcase() {
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                className="group flex flex-col overflow-hidden rounded-[2rem] bg-white border border-higarden-soft/80 shadow-[0_6px_20px_rgba(7,91,42,0.06)] transition-all hover:shadow-[0_16px_36px_rgba(7,91,42,0.15)]"
+                className="group flex flex-col overflow-hidden rounded-[2rem] bg-white border border-higarden-soft/80 shadow-[0_6px_20px_rgba(7,91,42,0.06)] transition-[box-shadow,border-color] duration-300 hover:shadow-[0_16px_36px_rgba(7,91,42,0.15)] hover:border-higarden-bright/40"
               >
                 {/* Plant Image */}
-                <div className="relative aspect-square w-full overflow-hidden bg-forest-900">
+                <div className="relative aspect-square w-full overflow-hidden bg-forest-100/70">
                   <Image
                     src={plant.image.src}
                     alt={plant.image.alt}
                     fill
-                    sizes="(min-width: 1024px) 22vw, (min-width: 640px) 44vw, 88vw"
+                    sizes="(min-width: 1280px) 280px, (min-width: 640px) 44vw, calc(100vw - 32px)"
                     className="object-cover transition-transform duration-500 group-hover:scale-108"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />

@@ -22,31 +22,32 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-          <svg width="56" height="56" viewBox="0 0 40 40">
+          <svg width="60" height="60" viewBox="0 0 40 40">
+            <rect width="40" height="40" rx="20" fill="#5DB334" />
             <path
-              d="M20 6c7 3 11 9 11 16 0 6.6-5.4 12-12 12S7 28.6 7 22c0-3 1.2-5.7 3.2-7.8C12.6 17 15 19.5 17 22.5 17.6 15.6 18.4 10 20 6Z"
-              fill="#C9A961"
+              d="M20 7c6 2.5 9.5 7.5 9.5 13.5 0 5.5-4.5 10-10 10s-10-4.5-10-10c0-2.5 1-4.8 2.7-6.5C13.8 16.5 15.8 18.5 17.5 21c0.5-5.8 1.2-10.5 2.5-14Z"
+              fill="#FFFFFF"
             />
           </svg>
-          <span style={{ fontSize: 40, color: "#FAF7F0", fontWeight: 600 }}>{site.name}</span>
+          <span style={{ fontSize: 44, color: "#FAF7F0", fontWeight: 700 }}>{site.name}</span>
         </div>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            marginTop: 48,
-            fontSize: 58,
-            fontWeight: 200,
+            marginTop: 44,
+            fontSize: 56,
+            fontWeight: 300,
             color: "#FAF7F0",
             lineHeight: 1.15,
             maxWidth: 900,
           }}
         >
-          <span>We don&rsquo;t just plant gardens.</span>
-          <span style={{ color: "#C9A961", fontWeight: 400 }}>We craft living spaces.</span>
+          <span>Stay green and be seen.</span>
+          <span style={{ color: "#5DB334", fontWeight: 600 }}>We craft living Kerala gardens.</span>
         </div>
-        <div style={{ marginTop: 40, fontSize: 24, color: "rgba(250,247,240,0.7)" }}>
-          Premium Landscaping &amp; Garden Design in Kerala
+        <div style={{ marginTop: 36, fontSize: 24, color: "rgba(250,247,240,0.8)" }}>
+          Kerala-Specialist Landscaping &amp; Nursery Studio &bull; Palakkad
         </div>
       </div>
     ),

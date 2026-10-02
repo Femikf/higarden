@@ -18,7 +18,6 @@ import {
 import { MagneticButton } from "@/components/shared/MagneticButton";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { site } from "@/constants/site";
-import { cn } from "@/lib/utils";
 
 const STAGES = [
   {

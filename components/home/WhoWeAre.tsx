@@ -6,7 +6,6 @@ import { Calendar, MapPin, Trees } from "lucide-react";
 import { fadeUp, scaleIn, staggerContainer, viewportOnce } from "@/lib/motion";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { MagneticButton } from "@/components/shared/MagneticButton";
-import { unsplash } from "@/lib/unsplash";
 
 const keyHighlights = [
   {
@@ -45,8 +44,8 @@ export function WhoWeAre() {
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-[0_20px_50px_rgba(7,91,42,0.15)] border-4 border-white">
             <motion.div variants={scaleIn} className="relative h-full w-full">
               <Image
-                src={unsplash("1758599543115-43fd2f939b7e", 800, 1000)}
-                alt="HiGarden team landscaping a lush tropical Kerala garden"
+                src="/images/kerala-landscaping/kerala-terracotta-courtyard.png"
+                alt="HiGarden landscaped Kerala courtyard with terracotta pots, brick jali screen, and lush ferns"
                 fill
                 sizes="(min-width: 1024px) 42vw, 90vw"
                 className="object-cover"
@@ -57,7 +56,7 @@ export function WhoWeAre() {
           {/* Floating Experience Badge */}
           <motion.div
             variants={fadeUp}
-            className="absolute -bottom-6 -right-4 w-56 rounded-3xl border border-higarden-soft bg-white/95 p-5 shadow-[0_16px_36px_rgba(7,91,42,0.16)] backdrop-blur-md sm:-right-6"
+            className="absolute -bottom-6 right-2 w-52 sm:w-56 rounded-3xl border border-higarden-soft bg-white/95 p-4 sm:p-5 shadow-[0_16px_36px_rgba(7,91,42,0.16)] backdrop-blur-md sm:-right-6"
           >
             <div className="flex items-center gap-3">
               <div className="flex size-11 items-center justify-center rounded-2xl bg-higarden-bright/20 text-forest-900 font-extrabold">
@@ -107,7 +106,7 @@ export function WhoWeAre() {
                 <motion.div
                   key={item.label}
                   variants={fadeUp}
-                  className="flex flex-col gap-2 rounded-2xl border border-higarden-soft bg-higarden-soft/30 p-4 transition-all hover:border-higarden-bright/40 hover:bg-white hover:shadow-md"
+                  className="flex flex-col gap-2 rounded-2xl border border-higarden-soft bg-higarden-soft/30 p-4 transition-[border-color,background-color,box-shadow] duration-200 hover:border-higarden-bright/40 hover:bg-white hover:shadow-md"
                 >
                   <div className="flex items-center gap-2">
                     <span className="flex size-8 items-center justify-center rounded-xl bg-higarden-bright/20 text-higarden-primary">

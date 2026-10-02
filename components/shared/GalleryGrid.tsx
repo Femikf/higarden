@@ -55,10 +55,10 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
             onClick={() => open(index)}
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: "60px" }}
+            transition={{ duration: 0.4 }}
             className={cn(
-              "group relative block w-full overflow-hidden rounded-2xl",
+              "group relative block w-full overflow-hidden rounded-2xl bg-forest-100/70 border border-higarden-soft/40 shadow-sm",
               image.aspectClass
             )}
           >

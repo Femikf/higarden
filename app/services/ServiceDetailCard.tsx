@@ -44,13 +44,13 @@ export function ServiceDetailCard({ service, reverse }: { service: Service; reve
         initial="hidden"
         whileInView="show"
         viewport={viewportOnce}
-        className="relative aspect-[4/3] overflow-hidden rounded-[2.5rem]"
+        className="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] bg-forest-100/70 border border-higarden-soft/60 shadow-lg"
       >
         <Image
           src={service.image.src}
           alt={service.image.alt}
           fill
-          sizes="(min-width: 1024px) 44vw, 90vw"
+          sizes="(min-width: 1024px) 44vw, (min-width: 640px) 48vw, 92vw"
           className="object-cover"
         />
       </motion.div>

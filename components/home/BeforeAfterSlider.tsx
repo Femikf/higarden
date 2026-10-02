@@ -3,16 +3,15 @@
 import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import { MoveHorizontal } from "lucide-react";
-import { unsplash } from "@/lib/unsplash";
 import { cn } from "@/lib/utils";
 
 const before = {
-  src: unsplash("1766229034504-176120cfbfd1", 1600, 1000),
-  alt: "Overgrown, unplanned garden before HiGarden's renovation",
+  src: "/images/transformation/kerala-garden-before.jpg",
+  alt: "Raw, uncultivated Kerala villa backyard with barren laterite soil before HiGarden landscape renovation",
 };
 const after = {
-  src: unsplash("1765421529635-ac766cf4229a", 1600, 1000),
-  alt: "The same garden after HiGarden's considered redesign",
+  src: "/images/transformation/kerala-garden-after.jpg",
+  alt: "The same Kerala villa transformed with manicured lawn, stepping stone path, plumeria blooms, and pergola sanctuary",
 };
 
 export function BeforeAfterSlider() {
@@ -69,7 +68,7 @@ export function BeforeAfterSlider() {
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerLeave={onPointerUp}
-        className="relative mx-auto aspect-[16/10] w-full max-w-5xl select-none overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-forest-900 shadow-[0_25px_60px_-15px_rgba(7,91,42,0.35)] border-2 sm:border-4 border-white touch-none"
+        className="relative mx-auto aspect-[16/10] w-full max-w-5xl select-none overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-forest-900 shadow-[0_25px_60px_-15px_rgba(7,91,42,0.35)] border-2 sm:border-4 border-white touch-pan-y"
       >
         <Image
           src={after.src}

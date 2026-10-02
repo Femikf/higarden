@@ -39,8 +39,8 @@ export const services: Service[] = [
       "We design layered tropical plantings — canopy, understory and ground cover — engineered for Kerala's monsoon cycle so the garden looks vibrant and intentional throughout the entire year.",
     icon: "Palmtree",
     image: {
-      src: unsplash("1612492114124-ede97dcb6a40", 1200, 1400),
-      alt: "Lush tropical residential garden with palms and layered green foliage",
+      src: "/images/services/kerala-residential-landscaping.jpg",
+      alt: "Luxury Kerala residential villa landscaping with manicured lawn, layered tropical borders, and stone pathway",
       recommendedFilename: "higarden-service-residential-landscaping.jpg",
     },
   },
@@ -109,8 +109,8 @@ export const services: Service[] = [
       "Site visits and planting/hardscape recommendations for architects and builders who want landscape integrated into the foundation from the very beginning.",
     icon: "Compass",
     image: {
-      src: unsplash("1765378025272-68132af6e7e5", 1200, 1400),
-      alt: "Consultants reviewing architectural site plans for a landscape project",
+      src: "/images/services/kerala-landscape-consultation.jpg",
+      alt: "Architectural Kerala villa landscape site plan, drafting tools, and material palette on consultation table",
       recommendedFilename: "higarden-service-landscape-consultation.jpg",
     },
   },

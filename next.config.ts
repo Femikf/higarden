@@ -14,6 +14,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: [
+      "lucide-react",
+      "react-icons",
+      "framer-motion",
+      "clsx",
+      "tailwind-merge",
+    ],
+  },
 };
 
 export default nextConfig;

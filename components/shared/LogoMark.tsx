@@ -13,79 +13,63 @@ export function LogoMark({
   className,
   tone = "dark",
   size = "md",
-  logoSrc,
+  logoSrc = "/images/logo/higarden-logo.png",
   showSubtitle = true,
 }: LogoMarkProps) {
-  // If a future PNG or SVG logo asset is passed or placed at /higarden-logo.svg or /higarden-logo.png
-  if (logoSrc) {
-    const heightMap = { sm: 28, md: 36, lg: 48 };
-    return (
-      <span className={cn("inline-flex items-center", className)}>
-        <Image
-          src={logoSrc}
-          alt="HiGarden"
-          width={heightMap[size] * 3.5}
-          height={heightMap[size]}
-          className={cn("h-auto object-contain", size === "sm" ? "max-h-7" : size === "lg" ? "max-h-12" : "max-h-9")}
-          priority
-        />
-      </span>
-    );
-  }
-
   const textColor = tone === "dark" ? "text-forest-900" : "text-white";
-  const leafColorPrimary = tone === "dark" ? "#075B2A" : "#FFFFFF";
-  const leafColorAccent = tone === "dark" ? "#63C132" : "#8ED63F";
   const subtitleColor = tone === "dark" ? "text-forest-700" : "text-higarden-lime";
 
-  const sizeClasses = {
-    sm: { icon: "size-6", text: "text-lg", sub: "text-[0.55rem]" },
-    md: { icon: "size-8", text: "text-2xl", sub: "text-[0.62rem]" },
-    lg: { icon: "size-10", text: "text-3xl", sub: "text-[0.7rem]" },
+  const sizeConfig = {
+    sm: {
+      badgeSize: 34,
+      badgeClass: "size-[34px]",
+      text: "text-lg",
+      sub: "text-[0.58rem]",
+    },
+    md: {
+      badgeSize: 44,
+      badgeClass: "size-10 sm:size-[44px]",
+      text: "text-xl sm:text-2xl",
+      sub: "text-[0.66rem] sm:text-[0.7rem]",
+    },
+    lg: {
+      badgeSize: 56,
+      badgeClass: "size-14 sm:size-16",
+      text: "text-2xl sm:text-3xl",
+      sub: "text-xs",
+    },
   }[size];
 
   return (
-    <span className={cn("inline-flex items-center gap-2.5 font-heading select-none", className)}>
-      {/* Botanical Emblem */}
-      <span className="relative flex shrink-0 items-center justify-center">
-        <svg
-          viewBox="0 0 44 44"
-          aria-hidden="true"
-          className={cn("shrink-0 transition-transform duration-300 group-hover:scale-105", sizeClasses.icon)}
-        >
-          {/* Main Leaf Body */}
-          <path
-            d="M22 4C30 8 36 15 36 24C36 31.7 29.7 38 22 38C14.3 38 8 31.7 8 24C8 18 10 13 14 9C17 14 20 18 22 22C22.6 15 22.8 9 22 4Z"
-            fill={leafColorPrimary}
-          />
-          {/* Bright Green Sprout / Leaf Vein Accent */}
-          <path
-            d="M22 10C26 14 27.5 20 25.5 26"
-            stroke={leafColorAccent}
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            fill="none"
-          />
-          {/* Growth Dot */}
-          <circle cx="22" cy="7" r="2.5" fill={leafColorAccent} />
-        </svg>
+    <span className={cn("inline-flex items-center gap-3 font-heading select-none group", className)}>
+      {/* Official HiGarden Circular Badge Logo */}
+      <span className={cn("relative shrink-0 overflow-hidden rounded-full shadow-sm transition-transform duration-300 group-hover:scale-105", sizeConfig.badgeClass)}>
+        <Image
+          src={logoSrc}
+          alt="HiGarden official logo"
+          width={sizeConfig.badgeSize * 2}
+          height={sizeConfig.badgeSize * 2}
+          className="size-full object-cover"
+          priority
+        />
       </span>
 
-      {/* Brand Typography */}
-      <span className={cn("flex flex-col leading-none tracking-tight", textColor)}>
-        <span className={cn("font-bold tracking-tight font-heading flex items-baseline", sizeClasses.text)}>
+      {/* Brand Typography & Official Tagline */}
+      <span className={cn("flex flex-col leading-tight tracking-tight", textColor)}>
+        <span className={cn("font-extrabold tracking-tight font-heading flex items-baseline", sizeConfig.text)}>
           <span>Hi</span>
           <span className={tone === "dark" ? "text-higarden-primary" : "text-higarden-bright"}>Garden</span>
         </span>
         {showSubtitle && (
           <span
             className={cn(
-              "hidden font-semibold uppercase tracking-[0.2em] sm:block pt-0.5",
+              "font-medium italic tracking-wide text-nowrap hidden sm:inline-block",
+              tone === "light" && "!inline-block",
               subtitleColor,
-              sizeClasses.sub
+              sizeConfig.sub
             )}
           >
-            Landscaping &middot; Nursery
+            Stay green and be seen
           </span>
         )}
       </span>

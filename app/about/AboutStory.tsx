@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, scaleIn, staggerContainer, viewportOnce } from "@/lib/motion";
-import { unsplash } from "@/lib/unsplash";
 
 export function AboutStory() {
   return (
@@ -47,19 +46,19 @@ export function AboutStory() {
           viewport={viewportOnce}
           className="grid grid-cols-2 gap-4"
         >
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-lg border border-higarden-soft/40">
             <Image
-              src={unsplash("1774599730788-a74cd9253b56", 800, 1050)}
-              alt="HiGarden team reviewing plans together on site"
+              src="/images/kerala-landscaping/kerala-terracotta-courtyard.png"
+              alt="Traditional Kerala courtyard landscaping with terracotta planters and lush ferns"
               fill
               sizes="(min-width: 1024px) 24vw, 45vw"
               className="object-cover"
             />
           </div>
-          <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-3xl">
+          <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-3xl shadow-lg border border-higarden-soft/40">
             <Image
-              src={unsplash("1762213382179-00725e36e061", 800, 1050)}
-              alt="Aerial view of a symmetrical, formally designed garden layout"
+              src="/images/transformation/kerala-garden-after.jpg"
+              alt="Contemporary Kerala villa garden sanctuary designed and landscaped by HiGarden"
               fill
               sizes="(min-width: 1024px) 24vw, 45vw"
               className="object-cover"

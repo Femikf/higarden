@@ -48,11 +48,11 @@ export function OurProcess() {
                 key={step.step}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className="group relative flex flex-col gap-4 rounded-3xl bg-white p-7 border border-higarden-soft shadow-[0_6px_25px_rgba(7,91,42,0.06)] transition-all duration-300 hover:border-higarden-bright/50 hover:shadow-[0_16px_36px_rgba(7,91,42,0.14)]"
+                className="group relative flex flex-col gap-4 rounded-3xl bg-white p-7 border border-higarden-soft shadow-[0_6px_25px_rgba(7,91,42,0.06)] transition-[border-color,box-shadow] duration-300 hover:border-higarden-bright/50 hover:shadow-[0_16px_36px_rgba(7,91,42,0.14)]"
               >
                 {/* Step Badge with Icon */}
                 <div className="flex items-center justify-between">
-                  <div className="flex size-14 items-center justify-center rounded-2xl bg-higarden-soft border-2 border-higarden-bright/40 font-heading text-lg font-black text-higarden-primary shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-higarden-bright group-hover:text-forest-950">
+                  <div className="flex size-14 items-center justify-center rounded-2xl bg-higarden-soft border-2 border-higarden-bright/40 font-heading text-lg font-black text-higarden-primary shadow-sm transition-colors duration-300 group-hover:bg-higarden-bright group-hover:text-forest-950">
                     {step.step}
                   </div>
                   <span className="flex size-9 items-center justify-center rounded-xl bg-forest-900/5 text-higarden-primary group-hover:bg-forest-900 group-hover:text-white transition-colors">

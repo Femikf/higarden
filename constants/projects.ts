@@ -13,15 +13,15 @@ export const projectCategories: { value: ProjectCategory | "all"; label: string 
 export const projects: Project[] = [
   {
     slug: "kaloor-villa-courtyard",
-    title: "Kaloor Villa Courtyard",
+    title: "Kaloor Villa Landscape & Gazebo",
     location: "Kochi, Kerala",
     category: "villas",
     categoryLabel: "Villas",
     year: "2025",
     image: {
-      src: unsplash("1721989519334-40923a0ee1c0", 1200, 1500),
-      alt: "Landscaped courtyard of a modern villa with a swimming pool",
-      recommendedFilename: "higarden-project-kaloor-villa-courtyard.jpg",
+      src: "/images/kerala-landscaping/kerala-villa-gazebo-lawn.png",
+      alt: "Contemporary Kerala villa with wooden garden gazebo, manicured lawn, and stepping stones",
+      recommendedFilename: "higarden-project-kaloor-villa-gazebo.jpg",
     },
     aspectClass: "aspect-[4/5]",
   },

@@ -2,8 +2,8 @@ import type { NavLink, SocialLink } from "@/types";
 
 export const site = {
   name: "HiGarden",
-  tagline: "Transform your outdoor space into a beautiful living garden.",
-  subtagline: "More Green. More Life.",
+  tagline: "Stay green and be seen",
+  subtagline: "Kerala-Specialist Landscaping & Nursery Studio",
   legalName: "HiGarden Landscaping & Nursery Studio",
   description:
     "HiGarden transforms outdoor spaces across Kerala into beautiful living gardens. Kerala-specialist landscaping, garden design, setup, maintenance, and nursery plants.",

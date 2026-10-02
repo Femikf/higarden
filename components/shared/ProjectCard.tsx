@@ -11,13 +11,13 @@ export function ProjectCard({ project }: { project: Project }) {
     <motion.article
       variants={fadeUp}
       layout
-      className="group relative h-full w-full overflow-hidden rounded-[2rem] bg-forest-950 border border-higarden-soft/70 shadow-[0_10px_30px_rgba(7,91,42,0.1)] transition-all duration-500 hover:shadow-[0_20px_50px_rgba(7,91,42,0.25)]"
+      className="group relative h-full w-full overflow-hidden rounded-[2rem] bg-forest-950 border border-higarden-soft/70 shadow-[0_10px_30px_rgba(7,91,42,0.1)] transition-shadow duration-500 hover:shadow-[0_20px_50px_rgba(7,91,42,0.25)]"
     >
       <Image
         src={project.image.src}
         alt={project.image.alt}
         fill
-        sizes="(min-width: 1024px) 32vw, (min-width: 640px) 46vw, 92vw"
+        sizes="(min-width: 1280px) 420px, (min-width: 768px) 46vw, calc(100vw - 32px)"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/40 to-transparent opacity-75 transition-opacity duration-300 group-hover:opacity-90" />
@@ -29,7 +29,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <h3 className="font-heading text-xl font-bold text-white transition-colors group-hover:text-higarden-bright">
             {project.title}
           </h3>
-          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-300 group-hover:bg-higarden-bright group-hover:text-forest-950 group-hover:scale-110">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-white transition-colors duration-300 group-hover:bg-higarden-bright group-hover:text-forest-950">
             <ArrowUpRight className="size-4" />
           </span>
         </div>
