@@ -12,6 +12,20 @@ export const projectCategories: { value: ProjectCategory | "all"; label: string 
 
 export const projects: Project[] = [
   {
+    slug: "palakkad-courtyard-koi-pond",
+    title: "Palakkad Villa Courtyard & Koi Pond",
+    location: "Palakkad, Kerala",
+    category: "residential",
+    categoryLabel: "Residential",
+    year: "2025",
+    image: {
+      src: "/images/social/customer-courtyard-pond.jpg",
+      alt: "Natural koi pond, granite stepping stones, and tropical greenery in Palakkad villa courtyard — by HiGarden",
+      recommendedFilename: "higarden-project-palakkad-courtyard-pond.jpg",
+    },
+    aspectClass: "aspect-[4/5]",
+  },
+  {
     slug: "kaloor-villa-courtyard",
     title: "Kaloor Villa Landscape & Gazebo",
     location: "Kochi, Kerala",
@@ -41,15 +55,15 @@ export const projects: Project[] = [
   },
   {
     slug: "cafe-living-wall",
-    title: "Cafe Living Wall",
-    location: "Thiruvananthapuram, Kerala",
+    title: "Villa Boundary Living Wall",
+    location: "Kochi, Kerala",
     category: "vertical-gardens",
     categoryLabel: "Vertical Gardens",
     year: "2025",
     image: {
-      src: unsplash("1490187763999-9f273a5b7516", 1200, 1600),
-      alt: "Modular living wall of hanging planters being installed",
-      recommendedFilename: "higarden-project-cafe-living-wall.jpg",
+      src: "/images/social/vertical-garden-wall.jpg",
+      alt: "Lush vertical green wall installed along a Kerala villa compound with automated drip line",
+      recommendedFilename: "higarden-project-villa-living-wall.jpg",
     },
     aspectClass: "aspect-[3/4]",
   },

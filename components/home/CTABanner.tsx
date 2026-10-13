@@ -21,21 +21,21 @@ export function CTABanner() {
         <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-higarden-bright/35 bg-forest-900/90 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-higarden-lime shadow-sm backdrop-blur-md">
             <span className="size-2 rounded-full bg-higarden-bright animate-pulse" />
-            <span>START YOUR GARDEN JOURNEY</span>
+            <span>Sharing Knowledge Everyday &bull; Growing Greener Homes</span>
           </span>
 
           <h2
             id="cta-banner-heading"
             className="font-heading text-3xl font-extrabold leading-tight text-white text-balance sm:text-5xl lg:text-6xl"
           >
-            Ready to Transform{" "}
+            Ready to Grow{" "}
             <span className="text-higarden-bright drop-shadow-[0_2px_12px_rgba(99,193,50,0.35)]">
-              Your Space?
+              Something Beautiful?
             </span>
           </h2>
 
           <p className="max-w-xl text-base sm:text-xl text-white/90 leading-relaxed font-normal">
-            Let&rsquo;s create a garden that feels like it belongs there.
+            Message us on WhatsApp. Share photos of your plot, courtyard, or balcony, and let&rsquo;s craft your living Kerala sanctuary.
           </p>
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-4">

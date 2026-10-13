@@ -12,19 +12,19 @@ const keyHighlights = [
     icon: Calendar,
     stat: "10+ Years",
     label: "Gardening Experience",
-    detail: "Mastery in Kerala's monsoon, soil conditions & tropical plants",
+    detail: "Mastery in Kerala's monsoon, laterite soil & tropical flora",
   },
   {
     icon: Trees,
-    stat: "100+",
-    label: "Garden Projects",
-    detail: "Villas, residential courtyards, commercial cafes & resorts",
+    stat: "10k+",
+    label: "Garden Community",
+    detail: "Daily plant tips & guides on @higardencamp & Facebook",
   },
   {
     icon: MapPin,
-    stat: "Kerala Based",
+    stat: "Palakkad Farm",
     label: "Statewide Execution",
-    detail: "Palakkad Nursery & Kochi Garden Design Studio",
+    detail: "Katampazhipuram nursery & turnkey landscaping across Kerala",
   },
 ];
 
@@ -78,18 +78,18 @@ export function WhoWeAre() {
         <div className="flex flex-col gap-6 lg:col-span-7">
           <SectionHeading
             id="who-we-are-heading"
-            eyebrow="Who We Are"
+            eyebrow="Our Story & Community"
             title={
               <span>
-                Your Space.{" "}
-                <span className="text-higarden-primary">Our Green Touch.</span>
+                Sharing Knowledge.{" "}
+                <span className="text-higarden-primary">Growing Greener Homes.</span>
               </span>
             }
-            description="From a small home garden to a complete landscape transformation, we create outdoor spaces that look beautiful and stay healthy."
+            description="From our nursery farm in Katampazhipuram, Palakkad to outdoor spaces across Kerala, we turn everyday plant passion into thriving landscapes."
           />
 
           <p className="text-base text-higarden-muted leading-relaxed">
-            HiGarden was founded to bridge thoughtful landscape architecture with authentic nursery care in Kerala. Whether you are building a new contemporary home in Kochi, reviving a traditional courtyard in Thrissur, or styling an outdoor retreat in Palakkad, we take full responsibility for every root, stone, and irrigation line.
+            HiGarden began with a simple mission: sharing daily gardening knowledge with Kerala plant lovers so every home can stay green and flourish. What started as an authentic plant nursery in Katampazhipuram has grown into a statewide design and landscaping studio. Whether building a new villa garden in Kochi, styling an indoor Nadumuttam courtyard in Thrissur, or delivering healthy acclimatized palms to Calicut, we take pride in hands-on care.
           </p>
 
           {/* 3 Key Highlights Grid */}

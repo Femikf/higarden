@@ -48,15 +48,14 @@ export default function NurseryPage() {
         <div className="container-hg relative z-10 flex flex-col items-start gap-4">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-higarden-lime backdrop-blur-md">
             <span className="size-1.5 rounded-full bg-higarden-bright" />
-            Palakkad &middot; Kerala
+            Katampazhipuram, Palakkad &middot; Farm Direct
           </span>
           <h1 className="max-w-3xl font-heading text-4xl font-extrabold leading-[1.1] text-white text-balance sm:text-5xl lg:text-6xl">
-            Thriving plants, nurtured for{" "}
+            Hardened farm plants, nurtured for{" "}
             <span className="text-higarden-bright">Kerala spaces.</span>
           </h1>
           <p className="max-w-2xl text-base sm:text-lg text-white/80 leading-relaxed">
-            From statement indoor foliage and flowering courtyard varieties to mature landscaping stock.
-            Every plant is hardened and acclimated to Kerala&rsquo;s monsoon and heat.
+            From viral indoor foliage to mature landscaping palms. Cultivated at our Palakkad nursery farm and hardened to Kerala&rsquo;s heavy monsoons and summer heat.
           </p>
         </div>
       </section>

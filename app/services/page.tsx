@@ -35,18 +35,17 @@ export default function ServicesPage() {
           sizes="100vw"
           className="object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/60 to-forest-950/20" />
         <div className="container-hg relative z-10 flex flex-col items-start gap-4">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-higarden-lime backdrop-blur-md">
             <span className="size-1.5 rounded-full bg-higarden-bright" />
-            Landscaping &amp; Gardening Services
+            Growing Greener Homes &bull; Kerala Services
           </span>
           <h1 className="max-w-3xl font-heading text-4xl font-extrabold leading-[1.1] text-white text-balance sm:text-5xl lg:text-6xl">
             Everything your living garden{" "}
             <span className="text-higarden-bright">needs to flourish.</span>
           </h1>
           <p className="max-w-2xl text-base sm:text-lg text-white/80 leading-relaxed">
-            From complete villa setups to vertical living walls and scheduled maintenance. We handle every step under one studio.
+            From 3D masterplanning and velvety lawn turfing to courtyard Nadumuttam revival and living green walls. As shared on @higardencamp, we take full responsibility for your outdoor space.
           </p>
         </div>
       </section>

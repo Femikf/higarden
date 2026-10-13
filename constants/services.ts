@@ -4,11 +4,11 @@ import type { Service } from "@/types";
 export const services: Service[] = [
   {
     slug: "landscape-design",
-    title: "Landscape Design",
+    title: "Landscape Design & 3D Masterplanning",
     shortDescription:
-      "Considered, architectural garden master plans built around how you live outdoors in Kerala.",
+      "Architectural 3D landscape layouts, sun path studies, and tailored plant palettes before touching the soil.",
     description:
-      "Every project starts on paper — site analysis, sun studies, material palettes, 3D renderings and planting plans — before a single spade touches soil. The result is a garden that reads as designed, not decorated.",
+      "As featured across @higardencamp, every great garden begins on the drafting board. We map your Kerala plot's natural slopes, monsoon drainage lines, sunlight angles, and family lifestyle. You receive detailed 3D renders, hardscape elevations, and precise botanical lists so you can visualize your sanctuary before work begins.",
     icon: "PenTool",
     image: {
       src: unsplash("1762213382179-00725e36e061", 1200, 1400),
@@ -17,26 +17,12 @@ export const services: Service[] = [
     },
   },
   {
-    slug: "garden-setup",
-    title: "Garden Setup",
-    shortDescription:
-      "Complete residential and commercial garden builds, from grading and soil to the final planting.",
-    description:
-      "For villas, homes, and resorts, we handle the entire build — ground leveling, drainage, automated irrigation, soil amendment, hardscape and plant installation — as one coordinated project.",
-    icon: "Home",
-    image: {
-      src: unsplash("1677559401235-fe6d5ba9a4df", 1200, 1400),
-      alt: "Traditional Kerala villa garden setup with lush stone pathways and tropical trees",
-      recommendedFilename: "higarden-service-garden-setup.jpg",
-    },
-  },
-  {
     slug: "residential-landscaping",
-    title: "Residential Landscaping",
+    title: "Bespoke Villa Landscaping",
     shortDescription:
-      "Lush, climate-tuned private garden landscapes that turn Kerala's humidity and rainfall into an advantage.",
+      "Complete living Kerala villa gardens, layered tropical canopies, and lush greenery tuned for monsoon & summer.",
     description:
-      "We design layered tropical plantings — canopy, understory and ground cover — engineered for Kerala's monsoon cycle so the garden looks vibrant and intentional throughout the entire year.",
+      "From contemporary Kochi villas to traditional homes across Palakkad, Thrissur, and Calicut, we build rich, multi-tiered gardens. We layer majestic canopy trees, ornamental understories, flowering tropicals, and stepping pathways designed to look lush and vibrant 365 days a year.",
     icon: "Palmtree",
     image: {
       src: "/images/services/kerala-residential-landscaping.jpg",
@@ -45,40 +31,54 @@ export const services: Service[] = [
     },
   },
   {
-    slug: "garden-maintenance",
-    title: "Garden Maintenance",
+    slug: "garden-setup",
+    title: "Lawn Turfing & Carpet Grass",
     shortDescription:
-      "Scheduled care plans that keep a finished landscape thriving, manicured, and healthy year-round.",
+      "Premium Mexican grass, Bermuda, and shade-tolerant turf installation with precision laterite soil grading.",
     description:
-      "Pruning, soil nutrition, pest management, lawn mowing, and seasonal replanting on a recurring schedule — so the garden we handed over stays the garden you fell in love with.",
-    icon: "Scissors",
+      "The most asked question on our social media: how to get a velvety, weed-free lawn in Kerala. We handle entire site prep—deep weed clearing, organic compost enrichment, laser leveling, drainage slope grading, and roll-out installation of acclimated Mexican carpet grass or Pearl grass.",
+    icon: "Home",
     image: {
-      src: unsplash("1621958206813-2e9c0441c5b0", 1200, 1400),
-      alt: "Gardener tending and pruning lush garden plants in Kerala",
-      recommendedFilename: "higarden-service-garden-maintenance.jpg",
+      src: "/images/social/ig-lawn-turfing.jpg",
+      alt: "Kerala villa lawn turfing and Mexican carpet grass installation on red laterite soil",
+      recommendedFilename: "higarden-service-lawn-turfing.jpg",
     },
   },
   {
     slug: "vertical-gardens",
-    title: "Vertical Gardens",
+    title: "Vertical Living Green Walls",
     shortDescription:
-      "Living green walls that transform boundary walls, facades, and compact courtyards into lush focal points.",
+      "Space-saving living walls with automated micro-drip irrigation for boundary walls, balconies, and cafes.",
     description:
-      "Engineered living-wall systems with built-in drip irrigation and drainage, designed for compact plots, cafes, and modern villas where vertical greenery maximizes space.",
+      "Maximize your green footprint without sacrificing floor space. Our engineered vertical wall modules feature UV-resistant frames, lightweight aerated soil mediums, and timer-automated drip irrigation. Ideal for modern villa boundary walls, compact courtyards, and trendy commercial facades.",
     icon: "Layers",
     image: {
-      src: unsplash("1774440602181-a8f2d598c04f", 1200, 1400),
-      alt: "Lush vertical living wall of layered tropical green plants",
+      src: "/images/social/vertical-garden-wall.jpg",
+      alt: "Lush residential vertical living green wall with automated micro-drip irrigation — by HiGarden",
       recommendedFilename: "higarden-service-vertical-gardens.jpg",
     },
   },
   {
-    slug: "garden-renovation",
-    title: "Garden Renovation",
+    slug: "indoor-plants",
+    title: "Courtyard & Indoor Plant Styling",
     shortDescription:
-      "Reworking tired, overgrown, or poorly-planned outdoor areas into cohesive, modern green sanctuaries.",
+      "Traditional Nadumuttam revival and air-purifying indoor plant setups tailored to your home's natural light.",
     description:
-      "We assess what's worth preserving — mature trees, structural walls — and rebuild the rest around a fresh, practical design intent, executed smoothly in organized phases.",
+      "Bring Kerala's timeless architectural green spaces to life. We design skylit courtyards, pebble-bordered Nadumuttam sanctuaries, and indoor potted collections using exotic philodendrons, aglaonemas, and palms that genuinely thrive in your home's humidity and light conditions.",
+    icon: "Flower2",
+    image: {
+      src: "/images/social/indoor-plants-staircase.jpg",
+      alt: "Curated indoor tropical plants arranged in stylish pots along Kerala villa staircase — by HiGarden",
+      recommendedFilename: "higarden-service-indoor-plants.jpg",
+    },
+  },
+  {
+    slug: "garden-renovation",
+    title: "Garden Renovation & Makeovers",
+    shortDescription:
+      "Reviving tired, weed-choked, or poorly draining Kerala plots into modern, easy-to-maintain sanctuaries.",
+    description:
+      "Have an overgrown garden or a builder's bare laterite yard? We preserve mature specimen trees, rebuild damaged pathways, eliminate drainage chokepoints, and re-landscape the entire outdoor space in organized phases with fresh sod, stone hardscape, and tropical plants.",
     icon: "Hammer",
     image: {
       src: unsplash("1778411144698-7cf3bdae97a0", 1200, 1400),
@@ -87,26 +87,26 @@ export const services: Service[] = [
     },
   },
   {
-    slug: "indoor-plants",
-    title: "Indoor Plants & Styling",
+    slug: "garden-maintenance",
+    title: "Scheduled Garden Maintenance",
     shortDescription:
-      "Curated indoor greenery selected for your home's actual lighting conditions, not just aesthetics.",
+      "Expert pruning, organic fertilization, lawn mowing, and monsoon health checkups by trained horticulturists.",
     description:
-      "We select and place indoor plant collections matched to each room's light and airflow, paired with artisanal planters and scheduled care guides.",
-    icon: "Flower2",
+      "A great garden needs ongoing care. Our maintenance crew provides scheduled pruning, lawn edging, organic pest deterrence, soil nourishment, and pre-monsoon root treatments so your outdoor living space stays as immaculate as day one.",
+    icon: "Scissors",
     image: {
-      src: unsplash("1612366206518-535bea7db163", 1200, 1400),
-      alt: "Curated indoor plants arranged in stylish pots with tropical leaves",
-      recommendedFilename: "higarden-service-indoor-plants.jpg",
+      src: unsplash("1621958206813-2e9c0441c5b0", 1200, 1400),
+      alt: "Gardener tending and pruning lush garden plants in Kerala",
+      recommendedFilename: "higarden-service-garden-maintenance.jpg",
     },
   },
   {
     slug: "landscape-consultation",
-    title: "Landscape Consultation",
+    title: "Site Consultation & Plant Advisory",
     shortDescription:
-      "On-site advisory for homeowners, architects, and builders at the site planning stage.",
+      "On-site advisory across Kerala for homeowners, builders, and architects at the construction or planning stage.",
     description:
-      "Site visits and planting/hardscape recommendations for architects and builders who want landscape integrated into the foundation from the very beginning.",
+      "Invite our senior horticulturists to your plot anywhere in Kerala. We analyze soil permeability, identify shade zones, recommend climate-resilient species, and guide builders on civil integration before paving and masonry begin.",
     icon: "Compass",
     image: {
       src: "/images/services/kerala-landscape-consultation.jpg",

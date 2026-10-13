@@ -131,6 +131,8 @@ export interface NurseryPlant {
     alt: string;
     recommendedFilename: string;
   };
+  careTip?: string;
+  tag?: string;
 }
 
 export interface NurseryServiceItem {

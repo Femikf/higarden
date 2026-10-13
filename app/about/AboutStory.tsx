@@ -20,22 +20,22 @@ export function AboutStory() {
             className="inline-flex w-fit items-center gap-1.5 rounded-full border border-higarden-bright/30 bg-higarden-soft px-3.5 py-1 text-xs font-bold uppercase tracking-[0.2em] text-higarden-primary"
           >
             <span className="size-1.5 rounded-full bg-higarden-bright" />
-            Our Story
+            Our Story &bull; Sharing Knowledge Everyday
           </motion.span>
           <motion.h2
             variants={fadeUp}
             className="font-heading text-3xl font-extrabold leading-[1.15] text-forest-900 text-balance sm:text-4xl lg:text-5xl"
           >
-            Passionate about living gardens, rooted in Kerala.
+            Sharing knowledge daily. Growing greener homes across Kerala.
           </motion.h2>
           <motion.p variants={fadeUp} className="text-base leading-relaxed text-higarden-muted">
-            HiGarden began in 2014 with a clear vision: outdoor spaces across Kerala deserve thoughtful, vibrant garden designs rather than generic afterthought lawns.
+            HiGarden began with a deep passion for plants and a simple commitment: sharing daily gardening wisdom with Kerala homeowners so outdoor living spaces stay green, healthy, and thoughtfully crafted.
           </motion.p>
           <motion.p variants={fadeUp} className="text-base leading-relaxed text-higarden-muted">
-            We combined architectural landscape planning with our own plant nursery in Katampazhipuram, Palakkad. This allows us to nurture acclimatized tropical plants, ornamental specimens, and native palms that thrive through Kerala&rsquo;s heavy monsoon rains and hot dry spells.
+            What grew out of our botanical nursery farm in Katampazhipuram, Palakkad has evolved into an active community of over 10,000 garden lovers on @higardencamp and @higardenclub. Because we cultivate and harden our own plants right in Palakkad, every palm, tropical shrub, and flowering specimen is fully acclimatized to Kerala&rsquo;s heavy monsoon rains and hot summer heat before arriving at your doorstep.
           </motion.p>
           <motion.p variants={fadeUp} className="text-base leading-relaxed text-higarden-muted">
-            Today, our team partners with homeowners, villa owners, resorts, and architects. We take full ownership from initial site consultation and soil preparation to planting and ongoing care.
+            Today, our landscape studio partners with homeowners, architects, and builders statewide. From 3D masterplans and natural stone pathways to velvety lawn turfing and scheduled ongoing care, we take full pride in every living garden we build.
           </motion.p>
         </motion.div>
 
@@ -46,23 +46,33 @@ export function AboutStory() {
           viewport={viewportOnce}
           className="grid grid-cols-2 gap-4"
         >
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-lg border border-higarden-soft/40">
+          <div className="group relative aspect-[3/4] overflow-hidden rounded-3xl shadow-lg border border-higarden-soft/40 bg-forest-900">
             <Image
-              src="/images/kerala-landscaping/kerala-terracotta-courtyard.png"
-              alt="Traditional Kerala courtyard landscaping with terracotta planters and lush ferns"
+              src="/images/social/nursery-farm-pathway.jpg"
+              alt="HiGarden botanical nursery farm pathway with red laterite soil and shade netting in Katampazhipuram, Palakkad"
               fill
               sizes="(min-width: 1024px) 24vw, 45vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
+            <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+              <span className="inline-block rounded-full bg-black/60 px-2.5 py-1 text-[0.65rem] font-bold text-white backdrop-blur-xs">
+                Katampazhipuram Farm
+              </span>
+            </div>
           </div>
-          <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-3xl shadow-lg border border-higarden-soft/40">
+          <div className="group relative mt-8 aspect-[3/4] overflow-hidden rounded-3xl shadow-lg border border-higarden-soft/40 bg-forest-900">
             <Image
-              src="/images/transformation/kerala-garden-after.jpg"
-              alt="Contemporary Kerala villa garden sanctuary designed and landscaped by HiGarden"
+              src="/images/social/seedling-propagation.jpg"
+              alt="HiGarden team propagating seedlings and hardening plants for Kerala weather"
               fill
               sizes="(min-width: 1024px) 24vw, 45vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
+            <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+              <span className="inline-block rounded-full bg-black/60 px-2.5 py-1 text-[0.65rem] font-bold text-white backdrop-blur-xs">
+                Hands-On Plant Care
+              </span>
+            </div>
           </div>
         </motion.div>
       </div>

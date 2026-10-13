@@ -2,33 +2,33 @@ import type { FAQItem } from "@/types";
 
 export const faqs: FAQItem[] = [
   {
-    question: "What areas of Kerala does HiGarden work in?",
+    question: "Do you deliver nursery plants outside Palakkad across Kerala?",
     answer:
-      "We take on projects across Kerala, with most of our current work concentrated around Kochi, Thiruvananthapuram, Kollam, Alleppey, Wayanad and Munnar. For sites further out, we scope feasibility during the first consultation.",
+      "Yes! We deliver nursery plants, mature palms, and bulk landscaping stock across all 14 districts in Kerala. All plants are acclimated at our Katampazhipuram farm and packed in protective root balls to guarantee zero transit shock.",
   },
   {
-    question: "How long does a typical garden project take?",
+    question: "Which grass variety is best for a Kerala home lawn?",
     answer:
-      "A home garden setup usually runs 3–6 weeks from design sign-off to planting. Larger villa or resort projects with hardscape and irrigation can run 2–4 months. We give you a phase-by-phase timeline before work begins, not after.",
+      "It depends on your sunlight levels. For open, sunny lawns, Mexican carpet grass produces a dense, velvety emerald carpet. For areas under coconut palm canopies or partial shade, Pearl grass or Bermuda grass performs significantly better. We evaluate your light levels during our site survey.",
   },
   {
-    question: "Do you work with architects and builders during construction?",
+    question: "How much does a residential landscaping project cost?",
     answer:
-      "Yes — landscape consultation during the design or construction phase is one of our core services. We review drawings, walk the site with the architect, and flag landscape considerations (drainage, sun orientation, root clearance) before they become expensive to change.",
+      "Costs depend on plot square footage, hardscaping (granite stepping stones, timber pergolas), and plant maturity. We provide itemized, transparent estimates with zero hidden costs after our initial consultation and 3D design phase.",
   },
   {
-    question: "What does ongoing plant maintenance include?",
+    question: "Can you landscape compact spaces like Nadumuttam courtyards and balconies?",
     answer:
-      "Pruning, feeding, pest and disease management, irrigation checks and seasonal replanting, on a schedule we agree with you upfront — typically fortnightly or monthly depending on the garden's complexity.",
+      "Absolutely! A huge part of our work on @higardencamp features compact courtyards and balcony makeovers. We specialize in traditional Kerala Nadumuttam setups with terracotta planters, pebble borders, and space-saving vertical living walls with automated micro-drip lines.",
   },
   {
-    question: "Can you renovate an existing garden instead of starting from scratch?",
+    question: "How do I protect my garden and potted plants during the Kerala monsoon?",
     answer:
-      "Most of our renovation work keeps mature trees and usable hardscape, and rebuilds the rest around one cohesive design. We phase renovations so the garden stays partially usable throughout, rather than closing the whole space for months.",
+      "Drainage is the number one priority. Ensure pot drainage holes are elevated on pot feet, clear slope swales of debris, cut back watering completely during heavy downpours, and apply organic neem oil or bio-fungicide sprays to prevent root rot and leaf blights.",
   },
   {
-    question: "Do vertical gardens need special maintenance?",
+    question: "How do we book an on-site consultation or site survey?",
     answer:
-      "Living walls run on a dedicated irrigation and drainage system that we design and install with the wall itself, and we recommend them on our standard maintenance schedule — the systems are engineered to be low-intervention, not zero-intervention.",
+      "Simply message us on WhatsApp (+91 89436 38384) with your location, rough plot dimensions, and a few photos or video clips of your outdoor space. Our landscaping team will schedule an on-site visit with our senior horticulturist.",
   },
 ];

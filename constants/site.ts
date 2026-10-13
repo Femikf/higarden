@@ -3,10 +3,12 @@ import type { NavLink, SocialLink } from "@/types";
 export const site = {
   name: "HiGarden",
   tagline: "Stay green and be seen",
-  subtagline: "Kerala-Specialist Landscaping & Nursery Studio",
+  motto: "Sharing Knowledge Everyday",
+  mission: "Growing greener homes every day",
+  subtagline: "Kerala-Specialist Landscaping & Nursery Studio • Palakkad",
   legalName: "HiGarden Landscaping & Nursery Studio",
   description:
-    "HiGarden transforms outdoor spaces across Kerala into beautiful living gardens. Kerala-specialist landscaping, garden design, setup, maintenance, and nursery plants.",
+    "HiGarden brings the passion of @higardencamp and @higardenclub to Kerala homes. Sharing daily plant knowledge, designing architectural gardens, installing lush lawns, and supplying climate-hardened nursery plants from Katampazhipuram, Palakkad.",
   url: "https://higarden.in",
   phone: "+91 89436 38384",
   phoneHref: "tel:+918943638384",
@@ -18,7 +20,9 @@ export const site = {
     "https://www.google.com/maps?q=Katampazhipuram,Palakkad,Kerala,India&output=embed",
   foundedYear: 2014,
   instagram: "https://www.instagram.com/higardencamp/",
+  instagramHandle: "@higardencamp",
   facebook: "https://www.facebook.com/higardenclub",
+  facebookHandle: "@higardenclub",
 } as const;
 
 export const socialLinks: SocialLink[] = [

@@ -66,6 +66,11 @@ export function NurseryCatalog() {
                 <span className="absolute left-3.5 top-3.5 rounded-full bg-white/95 backdrop-blur-md px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-forest-900 shadow-sm">
                   {plant.categoryLabel}
                 </span>
+                {plant.tag && (
+                  <span className="absolute right-3.5 top-3.5 rounded-full bg-forest-900/90 text-higarden-lime backdrop-blur-md px-2.5 py-1 text-[0.62rem] font-extrabold uppercase tracking-wider shadow-sm">
+                    {plant.tag}
+                  </span>
+                )}
               </div>
 
               {/* Information */}
@@ -84,6 +89,13 @@ export function NurseryCatalog() {
                 <p className="mt-2.5 text-xs leading-relaxed text-higarden-muted line-clamp-2">
                   {plant.description}
                 </p>
+
+                {plant.careTip && (
+                  <div className="mt-3 rounded-xl bg-higarden-soft/70 border border-higarden-bright/20 p-2.5 text-[0.68rem] text-forest-900 leading-snug">
+                    <span className="font-bold text-higarden-primary">Farm Tip: </span>
+                    {plant.careTip}
+                  </div>
+                )}
 
                 {/* Specs */}
                 <div className="mt-4 space-y-1.5 border-t border-higarden-soft/70 pt-3 text-[0.72rem] text-forest-800">

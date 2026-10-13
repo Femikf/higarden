@@ -105,6 +105,11 @@ export function NurseryShowcase() {
                   <span className="absolute left-3.5 top-3.5 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-forest-900">
                     {plant.categoryLabel}
                   </span>
+                  {plant.tag && (
+                    <span className="absolute right-3.5 top-3.5 rounded-full bg-forest-900/90 text-higarden-lime backdrop-blur-md px-2.5 py-1 text-[0.62rem] font-extrabold uppercase tracking-wider shadow-sm">
+                      {plant.tag}
+                    </span>
+                  )}
                 </div>
 
                 {/* Plant Details */}
@@ -118,6 +123,13 @@ export function NurseryShowcase() {
                   <p className="mt-2 text-xs leading-relaxed text-higarden-muted line-clamp-2">
                     {plant.description}
                   </p>
+
+                  {plant.careTip && (
+                    <div className="mt-2.5 rounded-xl bg-higarden-soft/70 border border-higarden-bright/20 p-2 text-[0.65rem] text-forest-900 leading-snug line-clamp-2">
+                      <span className="font-bold text-higarden-primary">Tip: </span>
+                      {plant.careTip}
+                    </div>
+                  )}
 
                   {/* Micro Specs */}
                   <div className="mt-4 flex items-center justify-between border-t border-higarden-soft/70 pt-3 text-[0.7rem] font-medium text-forest-800">

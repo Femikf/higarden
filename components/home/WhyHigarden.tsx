@@ -12,27 +12,27 @@ import { unsplash } from "@/lib/unsplash";
 const visualPoints = [
   {
     icon: PenTool,
-    title: "Thoughtful Design",
+    title: "3D Landscape Design",
     description:
-      "Custom garden architecture planned around your site's light, slopes, and family lifestyle before touching the soil.",
+      "Architectural masterplanning tailored to your plot's sun path, monsoon drainage, and Kerala villa lifestyle before touching the soil.",
   },
   {
     icon: Sprout,
-    title: "Quality Plants",
+    title: "Palakkad Farm Direct",
     description:
-      "Direct nursery sourcing from Palakkad. Acclimatized, pest-free species hardened to thrive in Kerala's climate.",
+      "Every plant comes directly from our Katampazhipuram nursery farm, fully hardened to survive Kerala's heavy rains and summer heat.",
   },
   {
     icon: ShieldCheck,
-    title: "Complete Garden Care",
+    title: "Complete Living Care",
     description:
-      "End-to-end execution including soil microbiology, automated drip irrigation, seasonal pruning, and fertilization.",
+      "From laser soil grading and velvety lawn turfing to micro-drip irrigation and scheduled pruning, we take full responsibility.",
   },
   {
     icon: Palmtree,
-    title: "Local Tropical Expertise",
+    title: "Sharing Knowledge Daily",
     description:
-      "Deep understanding of Kerala's heavy monsoons, red-loam soils, and coastal conditions so gardens stay vibrant year-round.",
+      "Just like on @higardencamp, we provide ongoing, approachable guidance so your outdoor living space stays vibrant year-round.",
   },
 ];
 
@@ -54,14 +54,14 @@ export function WhyHigarden() {
       <div className="container-hg relative z-10 flex flex-col gap-16">
         <SectionHeading
           id="why-higarden-heading"
-          eyebrow="Why Choose Us"
+          eyebrow="Why Kerala Chooses HiGarden"
           title={
             <span>
-              Why Choose{" "}
-              <span className="text-higarden-bright">HiGarden?</span>
+              Rooted in Passion.{" "}
+              <span className="text-higarden-bright">Proven Across Kerala.</span>
             </span>
           }
-          description="We take full ownership of your outdoor space — architectural design, direct nursery plant supply, and disciplined ongoing care."
+          description="The same dedication, daily plant wisdom, and farm-fresh stock that built a community of 10k+ plant lovers across Kerala."
           tone="light"
           align="center"
           className="mx-auto max-w-2xl"

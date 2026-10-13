@@ -3,23 +3,23 @@ import { PenTool, Sprout, Palmtree, Scissors } from "lucide-react";
 const trustItems = [
   {
     icon: PenTool,
-    title: "Landscape Design",
-    description: "Custom architectural planning & 3D visualization",
+    title: "3D Landscape Design",
+    description: "Architectural masterplanning & sun study",
   },
   {
     icon: Sprout,
-    title: "Garden Setup",
-    description: "Complete soil prep, planting & irrigation setup",
+    title: "Lawn & Garden Setup",
+    description: "Laser soil grading & velvety grass turfing",
   },
   {
     icon: Palmtree,
-    title: "Plant Supply",
-    description: "Acclimatized specimens from our Palakkad nursery",
+    title: "Palakkad Farm Direct",
+    description: "100% hardened tropical nursery stock",
   },
   {
     icon: Scissors,
-    title: "Garden Maintenance",
-    description: "Scheduled seasonal pruning, feeding & lawn care",
+    title: "Complete Garden Care",
+    description: "Scheduled pruning, feeding & monsoon care",
   },
 ];
 
