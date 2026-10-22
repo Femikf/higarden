@@ -30,9 +30,9 @@ const InstagramFeed = dynamic(() =>
 const Testimonials = dynamic(() =>
   import("@/components/home/Testimonials").then((mod) => mod.Testimonials)
 );
-const FAQSection = dynamic(() =>
-  import("@/components/home/FAQSection").then((mod) => mod.FAQSection)
-);
+// const FAQSection = dynamic(() =>
+//   import("@/components/home/FAQSection").then((mod) => mod.FAQSection)
+// );
 const CTABanner = dynamic(() =>
   import("@/components/home/CTABanner").then((mod) => mod.CTABanner)
 );
@@ -62,7 +62,7 @@ export default function HomePage() {
       <OurProcess />
       <InstagramFeed />
       <Testimonials />
-      <FAQSection />
+      {/* <FAQSection /> */}
       <CTABanner />
     </>
   );

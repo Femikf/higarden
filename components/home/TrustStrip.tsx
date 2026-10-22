@@ -3,7 +3,7 @@ import { PenTool, Sprout, Palmtree, Scissors } from "lucide-react";
 const trustItems = [
   {
     icon: PenTool,
-    title: "3D Landscape Design",
+    title: "Landscape Design",
     description: "Architectural masterplanning & sun study",
   },
   {

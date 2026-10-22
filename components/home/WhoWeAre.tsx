@@ -10,13 +10,13 @@ import { MagneticButton } from "@/components/shared/MagneticButton";
 const keyHighlights = [
   {
     icon: Calendar,
-    stat: "10+ Years",
+    stat: "5+ Years",
     label: "Gardening Experience",
     detail: "Mastery in Kerala's monsoon, laterite soil & tropical flora",
   },
   {
     icon: Trees,
-    stat: "10k+",
+    stat: "5k+",
     label: "Garden Community",
     detail: "Daily plant tips & guides on @higardencamp & Facebook",
   },
@@ -64,7 +64,7 @@ export function WhoWeAre() {
               </div>
               <div>
                 <p className="font-heading text-2xl font-extrabold text-higarden-primary">
-                  10+ Years
+                  5+ Years
                 </p>
                 <p className="text-[0.7rem] font-bold uppercase tracking-wider text-higarden-muted">
                   Kerala Garden Craft

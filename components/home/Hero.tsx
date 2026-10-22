@@ -92,7 +92,7 @@ export function Hero() {
                   <Trees className="size-3.5 sm:size-4" />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs sm:text-sm font-bold text-white leading-tight">500+</p>
+                  <p className="text-xs sm:text-sm font-bold text-white leading-tight">50+</p>
                   <p className="text-[0.62rem] sm:text-xs text-white/60 truncate">Gardens Built</p>
                 </div>
               </div>

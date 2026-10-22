@@ -65,15 +65,18 @@ export interface GalleryImage {
 
 export interface Testimonial {
   name: string;
-  role: string;
+  role?: string;
   location: string;
   quote: string;
-  avatar: {
+  avatar?: {
     src: string;
     alt: string;
-    recommendedFilename: string;
+    recommendedFilename?: string;
   };
   rating: number;
+  source?: "Google" | "Client";
+  date?: string;
+  badge?: string;
 }
 
 export interface FAQItem {

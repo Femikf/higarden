@@ -79,6 +79,10 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${inter.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+      </head>
       <body className="flex min-h-full flex-col bg-cream text-forest-900 selection:bg-higarden-bright/30 selection:text-higarden-dark">
         <JsonLd data={localBusinessJsonLd()} />
         <a
