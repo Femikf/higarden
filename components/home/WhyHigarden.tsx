@@ -12,7 +12,7 @@ import { unsplash } from "@/lib/unsplash";
 const visualPoints = [
   {
     icon: PenTool,
-    title: "3D Landscape Design",
+    title: "Landscape Design",
     description:
       "Architectural masterplanning tailored to your plot's sun path, monsoon drainage, and Kerala villa lifestyle before touching the soil.",
   },

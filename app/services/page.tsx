@@ -45,7 +45,7 @@ export default function ServicesPage() {
             <span className="text-higarden-bright">needs to flourish.</span>
           </h1>
           <p className="max-w-2xl text-base sm:text-lg text-white/80 leading-relaxed">
-            From 3D masterplanning and velvety lawn turfing to courtyard Nadumuttam revival and living green walls. As shared on @higardencamp, we take full responsibility for your outdoor space.
+            From masterplanning and velvety lawn turfing to courtyard Nadumuttam revival and living green walls. As shared on @higardencamp, we take full responsibility for your outdoor space.
           </p>
         </div>
       </section>

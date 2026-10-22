@@ -4,11 +4,11 @@ import type { Service } from "@/types";
 export const services: Service[] = [
   {
     slug: "landscape-design",
-    title: "Landscape Design & 3D Masterplanning",
+    title: "Landscape Design & Masterplanning",
     shortDescription:
-      "Architectural 3D landscape layouts, sun path studies, and tailored plant palettes before touching the soil.",
+      "Architectural landscape layouts, sun path studies, and tailored plant palettes before touching the soil.",
     description:
-      "As featured across @higardencamp, every great garden begins on the drafting board. We map your Kerala plot's natural slopes, monsoon drainage lines, sunlight angles, and family lifestyle. You receive detailed 3D renders, hardscape elevations, and precise botanical lists so you can visualize your sanctuary before work begins.",
+      "As featured across @higardencamp, every great garden begins on the drafting board. We map your Kerala plot's natural slopes, monsoon drainage lines, sunlight angles, and family lifestyle. You receive detailed renders, hardscape elevations, and precise botanical lists so you can visualize your sanctuary before work begins.",
     icon: "PenTool",
     image: {
       src: unsplash("1762213382179-00725e36e061", 1200, 1400),

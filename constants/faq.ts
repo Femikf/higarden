@@ -14,7 +14,7 @@ export const faqs: FAQItem[] = [
   {
     question: "How much does a residential landscaping project cost?",
     answer:
-      "Costs depend on plot square footage, hardscaping (granite stepping stones, timber pergolas), and plant maturity. We provide itemized, transparent estimates with zero hidden costs after our initial consultation and 3D design phase.",
+      "Costs depend on plot square footage, hardscaping (granite stepping stones, timber pergolas), and plant maturity. We provide itemized, transparent estimates with zero hidden costs after our initial consultation and design phase.",
   },
   {
     question: "Can you landscape compact spaces like Nadumuttam courtyards and balconies?",

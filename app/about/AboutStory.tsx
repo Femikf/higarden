@@ -35,7 +35,7 @@ export function AboutStory() {
             What grew out of our botanical nursery farm in Katampazhipuram, Palakkad has evolved into an active community of over 10,000 garden lovers on @higardencamp and @higardenclub. Because we cultivate and harden our own plants right in Palakkad, every palm, tropical shrub, and flowering specimen is fully acclimatized to Kerala&rsquo;s heavy monsoon rains and hot summer heat before arriving at your doorstep.
           </motion.p>
           <motion.p variants={fadeUp} className="text-base leading-relaxed text-higarden-muted">
-            Today, our landscape studio partners with homeowners, architects, and builders statewide. From 3D masterplans and natural stone pathways to velvety lawn turfing and scheduled ongoing care, we take full pride in every living garden we build.
+            Today, our landscape studio partners with homeowners, architects, and builders statewide. From masterplans and natural stone pathways to velvety lawn turfing and scheduled ongoing care, we take full pride in every living garden we build.
           </motion.p>
         </motion.div>
 

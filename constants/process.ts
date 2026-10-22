@@ -11,7 +11,7 @@ export const processSteps: ProcessStep[] = [
     step: "02",
     title: "Plan Your Landscape",
     description:
-      "A customized 2D/3D master landscape plan — botanical selection, hardscape materials, ambient garden lighting, and automated irrigation layout.",
+      "A customized landscape plan — botanical selection, hardscape materials, ambient garden lighting, and automated irrigation layout.",
   },
   {
     step: "03",
